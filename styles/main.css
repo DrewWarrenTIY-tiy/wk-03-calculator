@@ -1,0 +1,13 @@
+.calcHolder {
+  width: 1000px;
+  height: 1000px;
+  display: flex;
+  justify-content:space-around;
+  align-items:stretch;
+}
+
+.answerBox {
+  height: 80px;
+  width: 100px;
+  background-color: lightblue;
+}

@@ -16,7 +16,7 @@ function calcDivide(a, b) {
   return a / b;
 }
 
-function calcModulate(a, b) {
+function calcRemainder(a, b) {
   return a % b;
 }
 
