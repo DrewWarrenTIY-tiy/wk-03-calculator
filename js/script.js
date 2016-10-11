@@ -21,6 +21,6 @@ function calcRemainder(a, b) {
 }
 
 function calcCalculate(a, b, cb) {
-  cb(a, b);
+  return cb(a, b);
   console.log(cb(a,b));
 }
