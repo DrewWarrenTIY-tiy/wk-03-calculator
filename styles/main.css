@@ -1,18 +1,21 @@
 .calcHolder {
-  width: 100%;
-  height: 100%;
+  width: 300px;
+  height: 50vh;
   display: flex;
-  justify-content:space-around;
-  align-items:stretch;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: lightgrey;
 }
 
 .answerBox {
   height: 60px;
-  width: 100px;
+  width: 150px;
   background-color: lightblue;
+  text-align: center;
 }
 
 button {
-  width: 27px;
-  height: 27px;
+  width: 33px;
+  height: 33px;
 }

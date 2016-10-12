@@ -1,6 +1,7 @@
 "use strict";
 
 var calcInput = [];
+var inputString = "";
 
 function calcAdd(a, b) {
   return a + b;
@@ -22,44 +23,54 @@ function calcRemainder(a, b) {
   return a % b;
 }
 
-function btnToArray(clicked_id) {
-  calcInput.push(clicked_id);
-  console.log(calcInput);
+function numToString(clicked_id) {
+  inputString += clicked_id;
+  console.log(inputString);
+  document.querySelector('.answerBox').innerHTML = inputString;
 }
-// NOT WORKING
+
+function operToString(clicked_id) {
+  inputString += (" " + clicked_id + " ");
+  console.log(inputString);
+  document.querySelector('.answerBox').innerHTML = inputString;
+}
+
 function equalButton() {
+  calcInput = inputString.split(" ");
+  console.log(calcInput);
   let a = parseFloat(calcInput[0]);
   let b = parseFloat(calcInput[2]);
   if (calcInput[1] == '+') {
-    let cb = calcAdd;
-    calcCalculate(a, b, cb);
-    document.querySelector('.answerBox').innerHTML = calcCalculate(a, b, cb);
-    console.log(calcCalculate(a, b, cb));
+    calcCalculate(a, b, calcAdd);
+    document.querySelector('.answerBox').innerHTML = calcCalculate(a, b, calcAdd);
+    inputString = calcCalculate(a, b, calcAdd);
+    console.log(calcCalculate(a, b, calcAdd));
   }
   if (calcInput[1] == '-') {
-    let cb = calcSubtract;
-    calcCalculate(a, b, cb);
-    document.querySelector('.answerBox').innerHTML = calcCalculate(a, b, cb);
-    console.log(calcCalculate(a, b, cb));
+    calcCalculate(a, b, calcSubtract);
+    document.querySelector('.answerBox').innerHTML = calcCalculate(a, b, calcSubtract);
+    inputString = calcCalculate(a, b, calcSubtract);
+    console.log(calcCalculate(a, b, calcSubtract));
   }
   if (calcInput[1] == '*') {
-    let cb = calcMultiply;
-    calcCalculate(a, b, cb);
-    document.querySelector('.answerBox').innerHTML = calcCalculate(a, b, cb);
-    console.log(calcCalculate(a, b, cb));
+    calcCalculate(a, b, calcMultiply);
+    document.querySelector('.answerBox').innerHTML = calcCalculate(a, b, calcMultiply);
+    inputString = calcCalculate(a, b, calcMultiply);
+    console.log(calcCalculate(a, b, calcMultiply));
   }
   if (calcInput[1] == '/') {
-    let cb = calcDivide;
-    calcCalculate(a, b, cb);
-    document.querySelector('.answerBox').innerHTML = calcCalculate(a, b, cb);
-    console.log(calcCalculate(a, b, cb));
+    calcCalculate(a, b, calcDivide);
+    document.querySelector('.answerBox').innerHTML = calcCalculate(a, b, calcDivide);
+    inputString = calcCalculate(a, b, calcDivide);
+    console.log(calcCalculate(a, b, calcDivide));
   }
   if (calcInput[1] == '%') {
-    let cb = calcRemainder;
-    calcCalculate(a, b, cb);
-    document.querySelector('.answerBox').innerHTML = calcCalculate(a, b, cb);
-    console.log(calcCalculate(a, b, cb));
+    calcCalculate(a, b, calcRemainder);
+    document.querySelector('.answerBox').innerHTML = calcCalculate(a, b, calcRemainder);
+    inputString = calcCalculate(a, b, calcRemainder);
+    console.log(calcCalculate(a, b, calcRemainder));
   }
+  console.log(inputString);
   console.log(calcInput);
 }
 
