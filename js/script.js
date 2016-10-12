@@ -30,10 +30,18 @@ function numToString(clicked_id) {
 }
 
 function operToString(clicked_id) {
-  inputString += (" " + clicked_id + " ");
+  inputString += " " + clicked_id + " ";
   console.log(inputString);
   document.querySelector('.answerBox').innerHTML = inputString;
 }
+
+// WORTHLESS NEGATIVE FUNCTION - SCRAPPED
+// function negToString(clicked_id) {
+//   if (inputString[0] !== '-') {
+//   inputString = "-" + inputString;
+//   document.querySelector('.answerBox').innerHTML = inputString;
+//   }
+// }
 
 function equalButton() {
   calcInput = inputString.split(" ");
