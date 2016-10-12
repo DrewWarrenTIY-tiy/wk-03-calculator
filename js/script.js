@@ -22,26 +22,22 @@ function calcRemainder(a, b) {
   return a % b;
 }
 
-function calcCalculate(a, b, cb) {
-  return cb(a, b);
-  console.log(cb(a,b));
-}
-
 function btnToArray(clicked_id) {
   calcInput.push(clicked_id);
   console.log(calcInput);
 }
 
-// function equalBtn() {
-//   if (calcInput[1] == '+') {
-//     calcInput[1] = calcAdd();
-//   }
-//   if (calcInput[1] == '-') {
-//     calcInput[1] = calcSubtract();
-//   }
-//   if (calcInput[1] == '*') {
-//     calcInput[1] = calcMultiply();
-//   }
-//
-//   calcCalculate(calcInput[0],calcInput[2], calcInput[1])
-// }
+function equalButton() {
+  if (calcInput[1] == '+') {
+    let cb = calcAdd();
+    let a = calcInput[0].parseInt;
+    let b = calcInput[2];
+    calcCalculate(a, b, cb);
+  }
+  console.log(calcInput);
+}
+
+function calcCalculate(a, b, cb) {
+  return cb(a, b);
+  console.log(cb(a,b));
+}
