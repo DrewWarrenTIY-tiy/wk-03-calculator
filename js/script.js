@@ -54,7 +54,7 @@ function equalButton() {
     inputString = calcCalculate(a, b, calcAdd);
     console.log(calcCalculate(a, b, calcAdd));
   }
-  if (calcInput[1] == '-') {
+  if (calcInput[1] == '−') {
     calcCalculate(a, b, calcSubtract);
     document.querySelector('.answerBox').innerHTML = calcCalculate(a, b, calcSubtract);
     inputString = calcCalculate(a, b, calcSubtract);
